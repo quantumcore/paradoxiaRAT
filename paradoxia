@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+"""
+
+Have a good time reading the source. You are an amazing person.
+
+"""
+from kernel.infodb import *
+from kernel.pdmain import *
+from kernel.banner import pbanner
+import _thread
+
+def main():
+    clear()
+    print(pbanner())
+    console()
+
+main()

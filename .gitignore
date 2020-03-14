@@ -1,0 +1,10 @@
+*.exe
+*.d
+*.pyc
+__pycache__/*
+.vscode/*
+bots/*
+suspicious-logins/*
+loot/*
+found.iris
+/images/*

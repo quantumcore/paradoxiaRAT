@@ -1,0 +1,11 @@
+geoip2
+configparser
+plyer
+tqdm
+names
+random-username
+requests
+requests[socks]
+stem
+instagram-py
+colorama

