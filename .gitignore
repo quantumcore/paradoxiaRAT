@@ -5,6 +5,5 @@ __pycache__/*
 .vscode/*
 bots/*
 suspicious-logins/*
-loot/*
 found.iris
 /images/*
