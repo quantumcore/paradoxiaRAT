@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png"><br>
 </p>
-Advanced Red Team Attack Toolkit.
+Advanced Attack Toolkit.
 
 ### Installation (via APT)
 ```bash
@@ -69,3 +69,8 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 - Run your file if it's not running on the System.
 - Download your file if it's deleted or not running.
 - Uses Powershell to Download file.
+
+
+#### Developer
+Hi my name's [Fahad](https://github.com/quantumcore).
+You may contact me, on [Discord](https://discordapp.com/invite/8snh7nx) or [My Website](https://quantumcore.github.io/)
