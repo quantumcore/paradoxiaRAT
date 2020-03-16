@@ -401,10 +401,10 @@ def console():
 
                     + exit - Exit.
 
-                    PARADOXIA Exploitation Framework
+                    PARADOXIA Attack Toolkit
                     Created by : QuantumCore (Fahad)
                     Github : https://github.com/quantumcore 
-                    Official Repository : https://github.com/quantumcore/paradoxia
+                    Official Repository : https://github.com/quantumcored/paradoxia
                     Discord Server : https://discordapp.com/invite/8snh7nx
 
                     """ 
