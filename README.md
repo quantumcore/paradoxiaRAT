@@ -8,8 +8,6 @@ Advanced Attack Toolkit.
 $ git clone https://github.com/quantumcored/paradoxia
 $ cd paradoxia
 $ sudo ./install.sh
-$ chmod +x paradoxia
-$ sudo ./paradoxia
 ```
 
 View How to use over [here](https://github.com/quantumcored/paradoxia/blob/master/main.md).
