@@ -10,7 +10,7 @@ $ cd paradoxia
 $ sudo ./install.sh
 ```
 
-**OR** View a video of setting up Paradoxia on **Kali Linux** over [here](https://youtu.be/F4TAdWDlR-w)
+**OR** View a video of setting up Paradoxia on **Kali Linux** over [here](https://youtu.be/F4TAdWDlR-w).
 
 View How to use over [here](https://github.com/quantumcored/paradoxia/blob/master/main.md).
 
