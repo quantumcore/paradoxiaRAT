@@ -35,7 +35,7 @@ $ cd IRIS
 $ ./iris.py -email myemail@service.com -password myemailpassword 
 ```
 
-Random Brute Force Discovery
+Password Spraying
 ```bash
 $ ./iris.py -discover-instagram true
 ```
