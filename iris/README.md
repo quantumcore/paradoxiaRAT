@@ -3,7 +3,7 @@ Mass Social Engineering tool and Email and Account Extraction (Random Brute Forc
 - Automatic Random Email and Password generation.
 - Load Email dumps too.
 - Mass Emailer with your Malacious Attachment (no Email dump required, but can be loaded).
-- Random Brute Force Discovery. Get Accounts that use Weak passwords on Instagram.
+- Password Spraying. Get Accounts that use Weak passwords on Instagram.
 - Classic Brute Force on Instagram.
 
 #### Why only Instagram?
