@@ -53,7 +53,7 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 - Mass Emailing with either legitimate or malacious Attachment.
 - Mass Emailing with or without an Email List.
 - **Random Brute Force Discovery** : Discover Instagram Usernames.
-- **Random Brute Force Discovery** : Discover Instagram Usernames and do a quick Brute Force on them with weak Passwords to possibly discover the Password.
+- Password Spraying.
 - Instagram Brute Force over Tor.
 
 ---
