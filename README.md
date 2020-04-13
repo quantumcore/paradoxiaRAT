@@ -73,6 +73,9 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 - Download your file if it's deleted or not running.
 - Uses Powershell to Download file.
 
+#### TODO 
+- Add feature to request elevation + check administrator.
+- Add Specific Account Bruteforce in IRIS Password sprayer.
 
 #### Developer
 Hi my name's [Fahad](https://github.com/quantumcore).
