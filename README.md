@@ -76,6 +76,7 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 #### TODO 
 - Add feature to request elevation + check administrator.
 - Add Specific Account Bruteforce in IRIS Password sprayer.
+- Automted BOT build.
 
 #### Developer
 Hi my name's [Fahad](https://github.com/quantumcore).
