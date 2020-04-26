@@ -74,7 +74,6 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 - Uses Powershell to Download file.
 
 #### TODO 
-- Add feature to request elevation + check administrator.
 - Add Specific Account Bruteforce in IRIS Password sprayer.
 - Automted BOT build.
 
