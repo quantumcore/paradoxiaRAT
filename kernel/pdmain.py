@@ -22,8 +22,6 @@ import tqdm
 
 colorama.init()
 
-
-global client, addr
 clients = []
 oslist = []
 
@@ -390,19 +388,16 @@ def console():
                     + blacklist - Blacklist an IP address.
                         - USAGE : blacklist <ip>
 
-                    + bytecheck - (Misc) Check the size of a string.
-                      - (NOTE : This was added for cryptographic testing and is useless for a user. Useful for developer.)
-                    
                     + botinfo - View information of a Connection BOT/Client.
 
                     + banner - Print banner.
 
-                    + build lhost=<lhost> lport=<lport> - Build the agent.
+                    + build <lhost> <lport> <password> <mode (static / normal) >
 
                     + exit - Exit.
 
                     PARADOXIA Attack Toolkit
-                    Created by : QuantumCore (Fahad)
+                    Created by : QuantumCore
                     Github : https://github.com/quantumcore 
                     Official Repository : https://github.com/quantumcored/paradoxia
                     Discord Server : https://discordapp.com/invite/8snh7nx
@@ -450,15 +445,6 @@ def console():
                         print("USAGE : session < session id> ")
                 except Exception as es:
                     print("Error! ("+str(es)+")")
-                    
-            elif(command == "bytecheck"):
-                message = input("Input : ")
-                msgsize = str(len(message)) + " Bytes."
-                if(len(message) > 100):
-                    print("\nYour Input : " + message + "\nSize : " + msgsize + "\n(Not Eligible for Password)")
-                else:
-                    print("\nYour Input : " + message + "\nSize : " + msgsize + "\n(Eligible for Password)")
-          
 
             elif(command.startswith("kill")):
                 try:
@@ -471,13 +457,14 @@ def console():
                     print("USAGE : kill <session id>")
             elif(command.startswith("build")):
                 try:
-                    lh = args[1].split("=")
-                    lp = args[2].split("=")
-                    
-                    create_agent(lh[1], lp[1], args[3])
+                    lhost = args[1]
+                    lport = args[2]
+                    passwd = args[3]
+                    mode = args[4]
+                    create_agent(lhost, lport ,passwd, mode)
                 except IndexError:
                     print("""
-                    [X] USAGE : build lhost=<lhost> lport=<lport> <static>/<normal>
+                    [X] USAGE : build <lhost> <lport> <password> <static>/<normal>
 
                     LHOST - Ipv4 Address of Server to Connect to.
                     LPORT - Port of Server to Connect to.

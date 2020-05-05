@@ -39,6 +39,7 @@ def run_session(sockfd,mode, input_string, cid_int, infoFor):
                     data = sendfile.read()
                     bufferst = os.stat(mfile)
                     print("["+Style.BRIGHT + Fore.LIGHTGREEN_EX + "+" + Style.RESET_ALL + "] File opened " + mfile + " ("+str(bufferst.st_size) + " bytes)" )
+                    time.sleep(1)
                     SendBytes(data) # Send file
                     print("["+Style.BRIGHT + Fore.LIGHTBLUE_EX + "*" + Style.RESET_ALL + "] Uploading file.")
             except FileNotFoundError:
