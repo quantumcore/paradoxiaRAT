@@ -31,8 +31,8 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 ---
 ##### Paradoxia Windows Bot Features
 ---
-~~**NOTE** : Do not upload the BOT to online scanners! 
-- **Fully** Undetectable.~~ EDIT : 06 - May 2020, This is not FUD anymore.
+~~**NOTE** : Do not upload the BOT to online scanners! ~~
+- ~~**Fully** Undetectable.~~ EDIT : 06 - May 2020, This is not FUD anymore.
 - View System Information. 
 - Persistence. 
 - Stealth. 
