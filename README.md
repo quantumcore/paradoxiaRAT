@@ -9,10 +9,12 @@ $ git clone https://github.com/quantumcored/paradoxia
 $ cd paradoxia
 $ sudo ./install.sh
 ```
-**USAGE Guide :** [Click here](https://blog.quantumcored.com/?p=6)
+
 **OR** View a video of setting up Paradoxia on **Kali Linux** over [here](https://youtu.be/F4TAdWDlR-w).
 
 View How to use over [here](https://github.com/quantumcored/paradoxia/blob/master/main.md).
+
+**USAGE Guide :** [Click here](https://blog.quantumcored.com/?p=6)
 
 ---
 ##### Paradoxia Console Features
