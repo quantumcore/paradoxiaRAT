@@ -81,7 +81,7 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 
 #### Developer
 Hi my name's [Fahad](https://github.com/quantumcore).
-You may contact me, on [Discord](https://discordapp.com/invite/8snh7nx) or [My Website](https://quantumcore.github.io/)
+You may contact me, on [Discord](https://discordapp.com/invite/8snh7nx) or [My Website](https://quantumcored.com/)
 
 #### LICENSE
 [VIEW LICENSE](https://github.com/quantumcored/paradoxia/blob/master/LICENSE) 
