@@ -3,6 +3,8 @@
 </p>
 Advanced Attack Toolkit.
 
+**Featured** : [Network Pivoting and Post exploitation framework](https://github.com/quantumcored/maalik)
+
 ### Installation (via APT)
 ```bash
 $ git clone https://github.com/quantumcored/paradoxia
