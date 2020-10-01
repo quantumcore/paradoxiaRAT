@@ -16,7 +16,6 @@ $ sudo ./install.sh
 
 View How to use over [here](https://github.com/quantumcored/paradoxia/blob/master/main.md).
 
-**USAGE Guide :** [Click here](https://blog.quantumcored.com/?p=6)
 
 ---
 ##### Paradoxia Console Features
@@ -78,8 +77,13 @@ View How to use over [here](https://github.com/quantumcored/paradoxia/blob/maste
 - Uses Powershell to Download file.
 
 #### TODO 
-- Add Specific Account Bruteforce in IRIS Password sprayer.
-- Automted BOT build.
+- Tools will be seperated in their own repositories.
+  - Paradoxia RAT
+  - Iris bruteforcer.
+  - Delete LoginDataText, It's useless.
+  - Thawne.
+- ParadoxiaRAT will go HUGE changes. Expect a LOT to come. For examples, Check [Maalik Framework.](https://github.com/quantumcored/maalik)
+
 
 #### Developer
 Hi my name's [Fahad](https://github.com/quantumcore).
@@ -89,3 +93,7 @@ You may contact me, on [Discord](https://discordapp.com/invite/8snh7nx) or [My W
 [VIEW LICENSE](https://github.com/quantumcored/paradoxia/blob/master/LICENSE) 
 
 The Developer is not responsible for any misuse of Damage caused by the program. This is created only to innovate InfoSec and **YOU**. :point_left:
+
+#### Donate
+Help me with my future projects. Thank you.
+[Donate with Crypto](https://commerce.coinbase.com/checkout/cebcb394-f73e-4990-98b9-b3fdd852358f)
