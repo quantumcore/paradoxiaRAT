@@ -37,6 +37,7 @@ Power off | Power off the Client system.
 Reboot | Reboot the client system.
 MSVC + MINGW Support | Visual studio project is also included.
 Reverse Shell | Stable Reverse Shell.
+Small Client | Maximum size is 30kb without icon.
 
 ---
 
