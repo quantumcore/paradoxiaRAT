@@ -33,6 +33,8 @@ Process Info | Get Process information.
 DLL Injection | Reflective DLL Injection over Socket, Load your own Reflective DLL, OR use ones available [here](https://github.com/quantumcored/maalik/tree/master/payloads).
 Power off | Power off the Client system.
 Reboot | Reboot the client system.
+MSVC + MINGW Support | Visual studio project is also included.
+Reverse Shell | Stable Reverse Shell.
 
 ---
 
