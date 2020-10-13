@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png" height = "100" width = "200" ><br>
-</p>
+![logp](https://github.com/quantumcored/paradoxia/blob/master/images/logo.png)
 Paradoxia Remote Access Tool.
 
 ### Features 
