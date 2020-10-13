@@ -73,7 +73,7 @@ sudo python3 paradoxia.py
 
 ![pd5](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd5.PNG)
 
-- There are plenty of things we can do right now, but for example only, I'd demonstrate keylogging.
+- There are plenty of things we can do right now, but for example only, I will demonstrate keylogging.
 
 ![pd6](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd7.PNG)
 
