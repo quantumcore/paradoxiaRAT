@@ -1,9 +1,41 @@
 <p align="center">
-  <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png"><br>
+  <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png" height = "500" width = "500" ><br>
 </p>
-Advanced Attack Toolkit.
+Paradoxia Remote Access Tool.
 
-**Featured** : [Network Pivoting and Post exploitation framework](https://github.com/quantumcored/maalik)
+### Features 
+
+##### Paradoxia Console
+Feature | Description
+--------|-------------
+Easy to use | Paradoxia is extremely easy to use, So far the easiest rat!
+Root Shell | -
+Automatic Client build | Build Paradoxia Client easily with or without the icon of your choice.
+Multithreaded | Multithreaded Console server, You can get multiple sessions.
+Toast Notifications | Desktop notification on new session
+Configurable Settings | Configurable values in ``paradoxia.ini``
+
+---
+
+##### Paradoxia Client
+Feature | Description
+--------|-------------
+Stealth | Runs in background.
+Full File Access | Full access to the entire file system.
+Persistence | Installs inside APPDATA and has startup persistence via Registry key.
+Upload / Download Files | Upload and download files.
+Screenshot | Take screenshot.
+Mic Recording | Record Microphone.
+Chrome Password Recovery | Dump Chrome Passwords using Reflective DLL (Does not work on latest version) :shipit:
+Keylogger | Log Keystrokes and save to file via Reflective DLL.
+Geolocate | Geolocate Paradoxia Client.
+Process Info | Get Process information.
+DLL Injection | Reflective DLL Injection over Socket, Load your own Reflective DLL, OR use ones available [here](https://github.com/quantumcored/maalik/tree/master/payloads).
+Power off | Power off the Client system.
+Reboot | Reboot the client system.
+
+---
+
 
 ### Installation (via APT)
 ```bash
@@ -12,77 +44,8 @@ $ cd paradoxia
 $ sudo ./install.sh
 ```
 
-**OR** View a video of setting up Paradoxia on **Kali Linux** over [here](https://youtu.be/F4TAdWDlR-w).
-
-View How to use over [here](https://github.com/quantumcored/paradoxia/blob/master/main.md).
-
-
----
-##### Paradoxia Console Features
----
-- Multithreaded, You can get multiple sessions. 
-- Configuration file BOT information database. 
-- Root Shell. 
-- Easy to use. 
-- Interact with online BOTs in a session. 
-- Kill a BOT. 
-- Blacklist BOT IP Adresses from connecting. 
-- Scan Connected IP if you do not get a session seconds after it connected. 
-- Get Desktop Notification if a new BOT connects. 
-- Build BOT with Host and Port easily. 
-- Enable/Disable and change settings in ``paradoxia.ini`` ( verbose, Auto print bot information on connect, BOT password, etc) 
----
-##### Paradoxia Windows Bot Features
----
-**NOTE** : Do not upload the BOT to online scanners!
-- ~~**Fully** Undetectable.~~ EDIT : 06 - May 2020, This is not FUD anymore.
-- View System Information. 
-- Persistence. 
-- Stealth. 
-- Usb Infection. 
-- File System Browsing. 
-- File Upload. 
-- File Download. 
-- Command Executing. 
-- Powershell Executing. 
-- Get PID of Process. 
-- Kill a Process. 
-- Screenshot. 
-- Mic Recording. 
-
----
-##### Paradoxia [IRIS](https://github.com/quantumcored/paradoxia/tree/master/iris) Features
----
-- Mass Emailing with either legitimate or malacious Attachment.
-- Mass Emailing with or without an Email List.
-- **Random Brute Force Discovery** : Discover Instagram Usernames.
-- Password Spraying.
-- Instagram Brute Force over Tor.
-
----
-##### Paradoxia [LoginDataText](https://github.com/quantumcored/paradoxia/tree/master/logindatatext) Features
----
-- Get information from ANY 'Login Data' File from Google Chrome.
-- Information such as URLS and Emails.
-
----
-##### Paradoxia [Thawne](https://github.com/quantumcored/paradoxia/tree/master/thawne) Features
----
-- Undetectable.
-- Persistent.
-- Runs in background.
-- A type of Logic Bomb with no harmful effects.
-- Run your file if it's not running on the System.
-- Download your file if it's deleted or not running.
-- Uses Powershell to Download file.
-
-#### TODO 
-- Tools will be seperated in their own repositories.
-  - Paradoxia RAT
-  - Iris bruteforcer.
-  - Delete LoginDataText, It's useless.
-  - Thawne.
-- ParadoxiaRAT will go HUGE changes. Expect a LOT to come. For examples, Check [Maalik Framework.](https://github.com/quantumcored/maalik)
+### Usage Guide :
+- coming soon hold on gimme 5 mins.
 
 
 #### Developer
