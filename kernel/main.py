@@ -875,6 +875,7 @@ def Console():
                         -. sessions - View online clients.
                         -. session - interact with a session.
                         -. build - Build Client.
+                        -. clientinfo < cid > - View session information.
                         -. kill - Kill session.
                         -. exit - Exit.
                         Use the help command inside a session to view Session specific help.
