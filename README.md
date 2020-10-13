@@ -14,6 +14,8 @@ Automatic Client build | Build Paradoxia Client easily with or without the icon 
 Multithreaded | Multithreaded Console server, You can get multiple sessions.
 Toast Notifications | Desktop notification on new session
 Configurable Settings | Configurable values in ``paradoxia.ini``
+Kill Sessions | Kill Sessions without getting in sesssion.
+View Session information | View Session information without getting in Session.
 
 ---
 
