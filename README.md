@@ -44,8 +44,36 @@ $ cd paradoxia
 $ sudo ./install.sh
 ```
 
-### Usage Guide :
-- coming soon hold on gimme 5 mins.
+### Example Usage :
+- Run Paradoxia
+```
+sudo python3 paradoxia.py
+```
+- Once in paradoxia Console, The first step would be to build the Client, Preferrably with an Icon. 
+![pd1](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd1.PNG)
+
+- After that's built, As you can see below it is detected by Windows Defender as a sever malware. Which is expected since it IS malware.
+![pd2](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd2.PNG)
+
+- I'm going to transfer the client on a Windows 10 Virtual machine and execute it. After Executing it, It appears under Startup programs in task manager. 
+![pd3](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd3.PNG)
+
+- Also it has copied itself inside Appdata directory and installed under the name we specified during build.
+![pdmiss](https://github.com/quantumcored/paradoxiaRAT/blob/master/images/pdmiss.PNG)
+
+- At the same time, I get a session at server side.
+![pd4](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd4.PNG)
+
+- First thing I'd do is get in the session and view information.
+![pd5](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd5.PNG)
+
+- There are plenty of things we can do right now, but for example only, I'd demonstrate keylogging.
+![pd6](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd7.PNG)
+
+You can see in the image above that It says it successfully injected dll, And in file listing there is a file named ``log.log``, Which contains the logged keystrokes.
+
+- Lets view captures keystrokes.
+![pd7](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd8.PNG)
 
 
 ### Changelogs
