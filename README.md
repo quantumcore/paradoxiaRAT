@@ -1,5 +1,5 @@
 <html>
-  <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png" height="100px" widgh = "100px">
+  <img src="https://github.com/quantumcored/paradoxia/blob/master/images/logo.png" height="90px" widgh = "90px">
   </html>
 Paradoxia Remote Access Tool.
 
