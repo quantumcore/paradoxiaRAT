@@ -14,7 +14,7 @@ Automatic Client build | Build Paradoxia Client easily with or without the icon 
 Multithreaded | Multithreaded Console server, You can get multiple sessions.
 Toast Notifications | Desktop notification on new session
 Configurable Settings | Configurable values in ``paradoxia.ini``
-Kill Sessions | Kill Sessions without getting in sesssion.
+Kill Sessions | Kill Sessions without getting in session.
 View Session information | View Session information without getting in Session.
 
 ---
@@ -54,7 +54,7 @@ $ sudo ./install.sh
 ```
 sudo python3 paradoxia.py
 ```
-- Once in paradoxia Console, The first step would be to build the Client, Preferrably with an Icon. 
+- Once in paradoxia Console, The first step would be to build the Client, Preferably with an Icon. 
 
 ![pd1](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd1.PNG)
 
