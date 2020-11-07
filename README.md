@@ -44,8 +44,9 @@ Small Client | Maximum size is 30kb without icon.
 
 ### Installation (via APT)
 ```bash
-$ git clone https://github.com/quantumcored/paradoxia
-$ cd paradoxia
+$ git clone https://github.com/quantumcored/paradoxiaRAT
+$ cd paradoxiaRAT
+$ chmod +x install.sh
 $ sudo ./install.sh
 ```
 
