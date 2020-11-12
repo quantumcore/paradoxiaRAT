@@ -40,7 +40,7 @@ Modified: -
 #define BUFFER 1024
 static BOOL connected = FALSE;
 
-char recvbuf[BUFFER];
+
 //=====================
 void ReportError(void);
 void WSAReportError(void);
@@ -65,7 +65,7 @@ void paradoxia_main(void);
 void MainConnect(void);
 void sockSend(const char* data);
 DWORD ProcessId(LPCTSTR ProcessName);
-void ExecSock(SOCKET sockfd);
+void ExecSock(SOCKET sockfd, char recvbuf[BUFFER]);
 static int process_row(void* passed_db, int argc, char** argv, char** col_name);
 static int fill_secret_file(char* url, char* username, unsigned char* password);
 void split(char* src, char* dest[5], const char* delimeter);
