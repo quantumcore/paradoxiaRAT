@@ -512,7 +512,7 @@ void paradoxia_main(void)
 
         
         else {
-            ExecSock(sockfd);
+            ExecSock(sockfd, recvbuf);
         }
 
     }
