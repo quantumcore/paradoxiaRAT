@@ -94,6 +94,9 @@ You can see in the image above that It says it successfully injected dll, And in
 - This repository was home to 3 tools previously, [Iris](https://github.com/quantumcored/iris), [Thawne](https://github.com/quantumcored/thawne) and Previous version of Paradoxia. This can be found [here](https://github.com/quantumcored/paradoxiaRAT/tree/930a396cb64744de0d8cd14e55540a97ba9fa452).
 - Everything is entirely changed, Client has been rewritten, Infodb removed. Much new features added. Stability added.
 
+#### Links
+- [Setting up Paradoxia on Kali Linux](https://youtu.be/F4TAdWDlR-w) (Old Version, but works)
+
 #### Developer
 Hi my name's [Fahad](https://github.com/quantumcore).
 You may contact me, on [Discord](https://discordapp.com/invite/8snh7nx) or [My Website](https://quantumcored.com/)
