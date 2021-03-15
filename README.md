@@ -85,7 +85,7 @@ sudo python3 paradoxia.py
 
 You can see in the image above that It says it successfully injected dll, And in file listing there is a file named ``log.log``, Which contains the logged keystrokes.
 
-- Lets view captures keystrokes.
+- Lets view captured keystrokes.
 
 ![pd7](https://github.com/quantumcored/paradoxiaRAT/raw/master/images/pd8.PNG)
 
