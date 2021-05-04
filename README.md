@@ -3,6 +3,8 @@
   </html>
 Paradoxia Remote Access Tool.
 
+**Are you looking for a GUI alternative? Check out [Remote Hacker Probe](https://github.com/quantumcored/remote_hacker_probe). More Advanced and Stable with ton of features.**
+
 ### Features 
 
 ##### Paradoxia Console
