@@ -493,7 +493,8 @@ void paradoxia_main(void)
             if (InternetCheckConnection("http://www.google.com", 1, 0)) {
                 memset(wanip, '\0', BUFFER);
                 hInternet = InternetOpen(NULL, INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
-                hFile = InternetOpenUrl(hInternet, "http://bot.whatismyipaddress.com/", NULL, 0, INTERNET_FLAG_RELOAD, 0);
+                hFile = InternetOpenUrl(hInternet, "https://myexternalip.com/raw", NULL, 0, INTERNET_FLAG_RELOAD, 0); // bot.whatsmyipaddress is down now.
+                // F
                 InternetReadFile(hFile, &wanip, sizeof(wanip), &rSize);
                 wanip[rSize] = '\0';
 
