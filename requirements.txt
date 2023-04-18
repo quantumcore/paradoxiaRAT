@@ -7,5 +7,4 @@ random-username
 requests
 requests[socks]
 stem
-instagram-py
 colorama
